@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: pushup-tracker-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      # Exclude venv and __pycache__ from the container to prevent conflicts
+      - /app/venv
+      - /app/__pycache__
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    container_name: pushup-tracker-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      # Keep node_modules in container separate from host
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped

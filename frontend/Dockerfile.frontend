@@ -1,0 +1,21 @@
+# Use Node.js 18 Alpine (lightweight)
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json and lock files
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm ci
+
+# The source code will be mounted as a volume in docker-compose.yml
+# This allows for live updates during development
+
+# Expose Vite's default port
+EXPOSE 5173
+
+# Command to run Vite dev server
+# --host 0.0.0.0 is required to expose the server outside the container
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

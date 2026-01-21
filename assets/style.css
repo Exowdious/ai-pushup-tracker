@@ -1,0 +1,156 @@
+/* NEOBRUTALISM THEME - Bold, Raw, Unapologetic */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+  --neo-black: #000000;
+  --neo-white: #FFFFFF;
+  --neo-yellow: #FFE66D;
+  --neo-pink: #FF6B9D;
+  --neo-cyan: #00F5FF;
+  --neo-green: #4ADE80;
+  --neo-red: #FF5757;
+  --neo-shadow: 6px 6px 0px #000000;
+  --neo-border: 4px solid #000000;
+}
+
+body {
+  background-color: var(--neo-yellow);
+  color: var(--neo-black);
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide Streamlit branding */
+#MainMenu, footer, header {
+  visibility: hidden;
+}
+
+/* Main content area */
+.main .block-container {
+  padding: 2rem 3rem;
+  max-width: 100%;
+}
+
+/* Headers */
+h1, h2, h3 {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 {
+  color: var(--neo-black);
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 0px var(--neo-pink);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Stat boxes */
+div[data-testid="column"] > div {
+  background-color: var(--neo-white);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  padding: 1.5rem;
+  margin: 0.5rem;
+  transition: transform 0.1s ease;
+}
+
+div[data-testid="column"] > div:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0px var(--neo-black);
+}
+
+/* Buttons */
+.stButton button {
+  background-color: var(--neo-cyan);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--neo-black);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  width: 100%;
+}
+
+.stButton button:hover {
+  background-color: var(--neo-pink);
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0px var(--neo-black);
+}
+
+.stButton button:active {
+  transform: translate(6px, 6px);
+  box-shadow: none;
+}
+
+/* Image container */
+div[data-testid="stImage"] {
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  background-color: var(--neo-black);
+  overflow: hidden;
+}
+
+/* Custom card styling */
+.neo-card {
+  background-color: var(--neo-white);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+.neo-card-correct {
+  background-color: var(--neo-green);
+}
+
+.neo-card-wrong {
+  background-color: var(--neo-red);
+}
+
+.neo-card-neutral {
+  background-color: var(--neo-cyan);
+}
+
+/* Camera feed container */
+.camera-container {
+  background-color: var(--neo-white);
+  border: var(--neo-border);
+  box-shadow: 8px 8px 0px var(--neo-black);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+/* Loading text */
+[data-testid="stMarkdownContainer"] div {
+  font-weight: 700;
+  text-transform: uppercase;
+}

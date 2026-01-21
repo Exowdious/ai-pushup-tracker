@@ -1,0 +1,535 @@
+/* STARTUP PAGE - RETRO BLACK & WHITE THEME */
+
+.startup-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--neo-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.5rem;
+}
+
+.startup-container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease-in;
+  padding-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER */
+.startup-header {
+  background-color: var(--neo-white);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow-sm);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.startup-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  color: var(--neo-black);
+  line-height: 1.2;
+  flex: 1;
+  text-align: left;
+}
+
+.startup-subtitle {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--neo-black);
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* COLOR SCHEME BUTTON */
+.color-scheme-btn {
+  background-color: var(--neo-black);
+  color: var(--neo-white);
+  border: var(--neo-border);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  padding: 0.75rem 1.5rem;
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  white-space: nowrap;
+}
+
+.color-scheme-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.color-scheme-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* INSTRUCTIONS GRID */
+.instructions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.instruction-card {
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow-sm);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.instruction-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--neo-black);
+}
+
+.instruction-card:active {
+  transform: translate(0, 0);
+  box-shadow: var(--neo-shadow-sm);
+}
+
+.card-yellow {
+  background-color: #F5F5F5;  /* Very light gray */
+}
+
+.card-cyan {
+  background-color: #E0E0E0;  /* Light gray */
+}
+
+.card-pink {
+  background-color: #D5D5D5;  /* Medium-light gray */
+}
+
+.card-green {
+  background-color: #EBEBEB;  /* Off-white gray */
+}
+
+.card-purple {
+  background-color: #C8C8C8;  /* Medium gray */
+}
+
+.card-orange {
+  background-color: #DADADA;  /* Light-medium gray */
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.instruction-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 0.75rem 0;
+  color: var(--neo-black);
+}
+
+.instruction-card p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--neo-black);
+  margin: 0;
+}
+
+.instruction-card p strong {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* IMPORTANT NOTES */
+.important-notes {
+  background-color: var(--neo-white);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow-sm);
+  padding: 2rem;
+}
+
+.important-notes h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  color: var(--neo-black);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.important-notes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.important-notes li {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--neo-black);
+  padding-left: 2rem;
+  position: relative;
+}
+
+.important-notes li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--neo-black);
+}
+
+/* FOOTER */
+.startup-footer {
+  background-color: var(--neo-white);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border: var(--neo-border);
+  appearance: none;
+  background-color: var(--neo-white);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: var(--neo-green);
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neo-black);
+}
+
+.checkbox-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--neo-black);
+}
+
+/* START BUTTON */
+.start-button {
+  background-color: #FFFFFF;  /* Pure white for active button */
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  padding: 1.5rem 3rem;
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--neo-black);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+  justify-content: center;
+}
+
+.start-button:hover:not(.disabled) {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--neo-black);
+  background-color: #F0F0F0;  /* Slight gray on hover */
+}
+
+.start-button:active:not(.disabled) {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.start-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #888888;  /* Dark gray when disabled */
+}
+
+.button-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* WATERMARK FOOTER */
+.watermark-footer {
+  text-align: center;
+  padding: 1rem 0 0 0;
+  margin-top: 1rem;
+}
+
+.watermark-footer p {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--neo-black);
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .startup-page {
+    padding: 1rem;
+  }
+
+  .startup-container {
+    gap: 1.5rem;
+  }
+
+  .startup-header {
+    padding: 1.5rem;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .startup-header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .color-scheme-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .startup-subtitle {
+    font-size: 1rem;
+  }
+
+  .instructions-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .instruction-card {
+    padding: 1.5rem;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .instruction-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .instruction-card p {
+    font-size: 0.9rem;
+  }
+
+  .important-notes {
+    padding: 1.5rem;
+  }
+
+  .important-notes h3 {
+    font-size: 1.2rem;
+  }
+
+  .important-notes li {
+    font-size: 0.9rem;
+  }
+
+  .startup-footer {
+    padding: 1.5rem;
+  }
+
+  .checkbox-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
+
+  .start-button {
+    font-size: 1.3rem;
+    padding: 1.2rem 2rem;
+    min-width: 100%;
+  }
+}
+
+/* =====================================================
+   DARK MODE THEME OVERRIDES
+   ===================================================== */
+
+[data-theme="dark"] .card-yellow {
+  background-color: #2D2D2D;  /* Dark gray */
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .card-cyan {
+  background-color: #3A3A3A;  /* Medium-dark gray */
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .card-pink {
+  background-color: #353535;  /* Dark gray */
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .card-green {
+  background-color: #404040;  /* Medium gray */
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .card-purple {
+  background-color: #454545;  /* Medium-light gray */
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .card-orange {
+  background-color: #3B3B3B;  /* Medium-dark gray */
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .instruction-card h2,
+[data-theme="dark"] .instruction-card p,
+[data-theme="dark"] .important-notes h3,
+[data-theme="dark"] .important-notes li {
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .startup-subtitle {
+  color: #CCCCCC;              /* Light gray for subtitle */
+}
+
+[data-theme="dark"] .checkbox-label {
+  color: #FFFFFF;              /* White text */
+}
+
+[data-theme="dark"] .watermark-footer p {
+  color: #FFFFFF;              /* White text */
+  opacity: 0.4;                /* Slightly more subtle in dark mode */
+}
+
+/* =====================================================
+   COLORFUL THEME OVERRIDES
+   ===================================================== */
+
+[data-theme="colorful"] .card-yellow {
+  background-color: #FFE66D;
+  color: #000000;
+}
+
+[data-theme="colorful"] .card-cyan {
+  background-color: #00F5FF;
+  color: #000000;
+}
+
+[data-theme="colorful"] .card-pink {
+  background-color: #FF6B9D;
+  color: #000000;
+}
+
+[data-theme="colorful"] .card-green {
+  background-color: #4ADE80;
+  color: #000000;
+}
+
+[data-theme="colorful"] .card-purple {
+  background-color: #A78BFA;
+  color: #000000;
+}
+
+[data-theme="colorful"] .card-orange {
+  background-color: #FB923C;
+  color: #000000;
+}
+
+@media (max-width: 480px) {
+  .startup-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .instruction-card {
+    padding: 1rem;
+  }
+
+  .start-button {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+}
