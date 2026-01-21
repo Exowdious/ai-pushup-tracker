@@ -4,9 +4,6 @@
 
 A real-time AI-powered push-up tracker that uses computer vision to count reps, analyze form, and provide audio feedback. Built with **Python (FastAPI + MediaPipe)** and **React**.
 
-![Project Banner](https://img.shields.io/badge/AI-Powered-blue?style=for-the-badge)
-![Exowdious](https://img.shields.io/badge/Created%20By-Exowdious-purple?style=for-the-badge)
-
 ---
 
 ## ✨ Features
@@ -30,7 +27,7 @@ The easiest way to run the project is using the universal startup script.
 ### 1. Setup Environment
 ```bash
 # Clone the repository (if you haven't already)
-git clone <repository-url>
+git clone https://github.com/Exowdious/ai-pushup-tracker.git
 cd ai-pushup-tracker
 
 # Create a virtual environment
